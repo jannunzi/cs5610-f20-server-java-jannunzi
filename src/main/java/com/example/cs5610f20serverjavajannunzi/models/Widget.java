@@ -4,6 +4,7 @@ public class Widget {
     private String id;
     private String name;
     private String type;
+    private String topicId;
 
     public Widget(String id, String name, String type) {
         this.id = id;
