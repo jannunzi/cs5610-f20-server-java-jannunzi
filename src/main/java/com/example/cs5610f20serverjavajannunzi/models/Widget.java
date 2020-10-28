@@ -12,7 +12,22 @@ public class Widget {
         this.type = type;
     }
 
+    public Widget(String id, String name, String type, String topicId) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.topicId = topicId;
+    }
+
     public Widget() {
+    }
+
+    public String getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(String topicId) {
+        this.topicId = topicId;
     }
 
     public String getId() {

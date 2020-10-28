@@ -20,8 +20,9 @@ public class WidgetController {
     }
 
     @GetMapping("/api/topics/{topicId}/widgets")
-    public List<Widget> findWidgetsForTopic(String topicId) {
-        return service.findAllWidgets();
+    public List<Widget> findWidgetsForTopic(
+            @PathVariable("topicId") String topicId) {
+        return service.findWidgetsForTopic(topicId);
     }
 
     @GetMapping("/api/widgets")

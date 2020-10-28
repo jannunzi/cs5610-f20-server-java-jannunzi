@@ -9,11 +9,20 @@ import java.util.List;
 public class WidgetService {
     List<Widget> widgets = new ArrayList<Widget>();
     {
-        widgets.add(new Widget("123", "Widget 123", "HEADING"));
-        widgets.add(new Widget("234", "Widget 234", "PARAGRAPH"));
-        widgets.add(new Widget("345", "Widget 345", "HEADING"));
+        widgets.add(new Widget("123", "Widget 123", "HEADING", "topic123"));
+        widgets.add(new Widget("234", "Widget 234", "PARAGRAPH", "topic123"));
+        widgets.add(new Widget("345", "Widget 345", "HEADING", "topic234"));
     }
 
+    public List<Widget> findWidgetsForTopic(String tid) {
+        List<Widget> ws = new ArrayList<Widget>();
+        for(Widget w: widgets) {
+            if(w.getTopicId().equals(tid)) {
+                ws.add(w);
+            }
+        }
+        return ws;
+    }
     public List<Widget> findAllWidgets() {
         return widgets;
     }
