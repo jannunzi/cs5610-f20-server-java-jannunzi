@@ -16,13 +16,6 @@ public class WidgetService {
     @Autowired
     WidgetRepository widgetRepository;
 
-    List<Widget> widgets = new ArrayList<Widget>();
-    {
-        widgets.add(new Widget(123, "Widget 123", "HEADING", "topic123"));
-        widgets.add(new Widget(234, "Widget 234", "PARAGRAPH", "topic123"));
-        widgets.add(new Widget(345, "Widget 345", "HEADING", "topic234"));
-    }
-
     public List<Widget> findWidgetsForTopic(String tid) {
         return widgetRepository.findWidgetsForTopic(tid);
 //        List<Widget> ws = new ArrayList<Widget>();
